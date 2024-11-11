@@ -71,6 +71,7 @@ const flipCard = (card) => {
     console.log(card)
     id = card.target.getAttribute('data-id')
     console.log(`${id} was clicked`)
+    if (flipped.includes(id)) return;
     document.querySelector(`.card${id}`).setAttribute('src', cardArray[id].png)
     flipped.push(id)
     console.log(flipped)
